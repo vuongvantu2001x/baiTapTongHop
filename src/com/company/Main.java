@@ -47,6 +47,9 @@ public class Main {
                     arrayPrime(arr, size);
                     break;
                 case 10:
+                    System.out.println("Mảng theo thứ tự giảm dần là ");
+                    sortArray(arr,size);
+                    break;
                 case 11:
                     System.exit(0);
                     break;
@@ -216,5 +219,21 @@ public class Main {
         }
     }
 
-
+    static void sortArray(int[] arr, int N){
+        for(int i=0;i<N;i++){
+            int max=arr[i];
+            int index=i;
+            for(int j=i;j<N;j++){
+                if(max<arr[j]){
+                    max=arr[j];
+                    index=j;
+                }
+            }
+            arr[index]=arr[i];
+            arr[i]=max;
+        }
+        for (int i = 0; i < N; i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
 }
