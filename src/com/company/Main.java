@@ -174,14 +174,14 @@ public class Main {
         int pos = seachElement(arr, N, X);
         int count = 0;
             while (pos!=-1){
-                for (int i = 0; i < N-count; i++) {
+                for (int i = pos; i < N-count; i++) {
                     arr[i]=arr[i+1];
                 }
                 count++;
                 pos = seachElement(arr, N, X);
             }
         System.out.print("Mảng sau khi xóa : ");
-        for (int i = 0; i < N-count; i++) {
+        for (int i = 0; i <N- count; i++) {
             System.out.print(arr[i]+" ");
         }
 
